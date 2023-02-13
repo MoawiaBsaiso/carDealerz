@@ -1,0 +1,187 @@
+.span-head {
+    color: blue;
+    font-weight: bold;
+    border-left: 5px solid yellow;
+    padding: 3px 15px;
+    font-size: 13px;
+}
+
+.main-btn {
+    padding: 10px 30px;
+    background-color: #3232bf;
+    color: #fff;
+}
+
+.service-sec {
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .boxes {
+        align-items: center;
+        justify-content: space-between;
+        .box {
+            width: 31%;
+        }
+    }
+}
+
+.we-are {
+    background-color: azure;
+    .we-are-content {
+        padding: 80px 0;
+        span {
+            @extend .span-head;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .we-content {
+            padding: 10px 0;
+            p {
+                padding-top: 10px;
+            }
+            h3 {
+                font-weight: bold;
+            }
+        }
+    }
+    .head-title {
+        padding: 180px 0;
+        color: #fff;
+        h1 {
+            font-size: 70px;
+        }
+        p {
+            width: 80%;
+        }
+    }
+    .main-form {
+        background-color: rgba(0, 0, 185, 0.6);
+        .form-info {
+            padding: 50px 25px;
+            h3 {
+                color: yellow;
+                font-size: 30px;
+            }
+            p {
+                color: #fff;
+                font-size: 16px;
+            }
+            .form-group {
+                margin-top: 25px;
+                color: #fff;
+                .form-control {
+                    margin-top: 14px;
+                    height: 50px;
+                }
+                button {
+                    background-color: yellow;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.faq-sec {
+    padding-top: 50px;
+    padding-bottom: 180px;
+    .head-faq-title {
+        padding: 30px 0;
+        .span {
+            @extend .span-head;
+        }
+    }
+    .img-question {
+        img {
+            width: 100%;
+            border-radius: 3px;
+        }
+    }
+    .panel-group .panel-heading+.panel-collapse>.panel-body {
+        border-top: 0;
+    }
+    .panel-body {
+        border-top: 0;
+    }
+    a {
+        &:focus {
+            color: blue;
+            text-decoration: none;
+        }
+        &:hover {
+            color: #3232bf;
+            text-decoration: none;
+        }
+    }
+    .panel-title {
+        a {
+            display: block;
+            position: relative;
+            &:after {
+                content: "\f078";
+                font-family: 'FontAwesome';
+                position: absolute;
+                right: 0;
+            }
+        }
+        a[aria-expanded="true"] {
+            color: blue;
+            &::after {
+                content: "\f077";
+            }
+        }
+    }
+}
+
+.fadeout {
+    transform: translateX(-100px);
+    opacity: 0;
+    animation-name: fadeOut;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+.fadein {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    // animation-delay: 3s;
+    // animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0px);
+        transition: all 0.2s ease-in;
+    }
+    // 50% {
+    //     opacity: 0.5;
+    //     transform: translateX(-25px);
+    //     transition: all 0.5s ease-in;
+    // }
+    100% {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: all 0.2s ease-in;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: all 0.2s ease-in;
+    }
+    // 50% {
+    //     opacity: 0.5;
+    //     transform: translateX(-25px);
+    //     transition: all 0.5s ease-in;
+    // }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        transition: all 0.5s ease-in;
+    }
+}

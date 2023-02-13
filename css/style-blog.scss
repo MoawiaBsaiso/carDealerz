@@ -1,0 +1,293 @@
+$main-color:#fff;
+$icon-color:yellow;
+.span-head {
+    color: blue;
+    font-weight: bold;
+    border-left: 5px solid yellow;
+    padding: 3px 15px;
+    font-size: 13px;
+}
+
+.main-btn {
+    padding: 10px 30px;
+    background-color: #3232bf;
+    color: #fff;
+}
+
+// $breakpoints: (
+// "xs": 0,
+// "sm": 480px,
+// "md": 720px,
+// "1g": 960px,
+// "xl": 1200px,
+// );
+// @mixin
+.main-blog {
+    background: url('../images/Blog-image/diverse-people-working-office.jpg') center center no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    .span {
+        @extend .span-head;
+        color: $icon-color;
+    }
+    .overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        bottom: 0;
+        top: 0px;
+        bottom: 0px;
+        height: 450px;
+    }
+    .title-blog {
+        // padding: 180px 20px;
+        transform: translateY(180px);
+        h1 {
+            color: #fff;
+            font-size: 50px;
+        }
+    }
+    .blog-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // padding: 239px 20px;
+        transform: translateY(230px);
+        color: #fff;
+        gap: 15px;
+        .blog-nav-home {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            a {
+                color: #fff;
+            }
+        }
+        .blog-nav-latest {
+            display: flex;
+            gap: 12px;
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.latest-blog {
+    padding: 60px 0 150px 0;
+    .span {
+        @extend .span-head
+    }
+    h2 {
+        font-weight: bold;
+    }
+    p.first-child {
+        width: 40%;
+        margin: auto;
+        padding: 20px 0;
+    }
+    .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        .box {
+            width: 31%;
+            .img-blog {
+                img {
+                    height: 200px;
+                    width: 100%;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+    .latest-blog .boxes .box {
+        width: 45%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .latest-blog .boxes .box {
+        width: 100%;
+    }
+    .latest-blog .boxes .box .img-blog img {
+        height: 250px;
+    }
+}
+
+footer {
+    .background {
+        background-image: url(https://templatekits.themewarrior.com/cardealerz/wp-content/uploads/sites/26/2021/07/overlay1.png);
+        background-position: top right;
+        background-repeat: no-repeat;
+        opacity: 1;
+        transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    }
+    // background: url('../images/map.jpg')center center no-repeat;
+    // background-size: cover;
+    // height: 500px;
+    background-color: rgb(47,
+    47,
+    128);
+    background-color: #070742;
+    // height: 650px;
+    position: relative;
+    .newsletter {
+        background-color: #f0f8ff;
+        position: absolute;
+        top: -75px;
+        padding: 50px;
+        border-radius: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        span {
+            @extend .span-head;
+            display: block;
+            margin-bottom: 25px;
+        }
+        // &:after {
+        //     position: absolute;
+        //     content: "";
+        //     bottom: -40px;
+        //     height: 40px;
+        //     width: 1px;
+        // }
+        h2 {
+            font-weight: bold;
+            font-size: 37px;
+        }
+        p {
+            padding-top: 20px;
+        }
+        .form-group {
+            padding: 25px 0;
+            input {
+                margin-bottom: 12px;
+                height: 50px;
+            }
+            button {
+                @extend .main-btn;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    }
+    .spacer {
+        height: 200px;
+        margin-bottom: 50px;
+    }
+    .row.second {
+        padding-top: 40px;
+        .footer-content {
+            a.logo {
+                display: flex;
+                align-items: baseline;
+                gap: 15px;
+                color: #fff;
+                font-size: 25px;
+            }
+            p {
+                font-size: 13px;
+                color: #fff;
+                padding: 10px 0 25px 0;
+            }
+            h3 {
+                margin-top: 0;
+                margin-bottom: 15px
+            }
+            span {
+                @extend .span-head;
+                color: #fff;
+                font-size: 16px;
+                font-weight: lighter;
+            }
+            ul {
+                padding: 20px 0;
+                li {
+                    padding: 10px 0;
+                    .footer-link {
+                        color: #fff;
+                        font-size: 13px;
+                    }
+                }
+            }
+            .footer-contact {
+                &.first {
+                    margin-top: 30px;
+                }
+            }
+            .footer-contact {
+                display: flex;
+                align-items: baseline;
+                gap: 25px;
+                padding: 2px 0;
+                color: #fff;
+                font-size: 13px;
+            }
+            .social-links {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                a.social-link {
+                    color: #000;
+                    background-color: #ffc209;
+                    padding: 5px 6px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        border-top: 1px solid #fff;
+        .footer-copyright {
+            text-align: center;
+            padding: 30px 0;
+            p {
+                color: rgba(255, 255, 255, .8);
+                letter-spacing: .3px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width:1200px) {
+    footer .newsletter {
+        padding: 25px;
+    }
+    footer .newsletter .form-group {
+        padding: 0px 0;
+    }
+    footer .newsletter p {
+        padding-top: 5px;
+    }
+    footer .newsletter p {
+        padding-top: 5px;
+    }
+    footer .newsletter h2 {
+        font-size: 30px;
+        margin: 15px 0 10px 0;
+    }
+    footer .newsletter span {
+        margin-bottom: 0px;
+    }
+}
+
+@media (min-width:320px) and (max-width:768px) {
+    footer .newsletter {
+        padding: 20px 15px !important;
+        left: 50%;
+        width: 90%;
+    }
+    footer .row.second {
+        padding-top: 80px;
+    }
+}

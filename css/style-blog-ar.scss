@@ -1,0 +1,25 @@
+.span-header {
+    color: blue;
+    font-weight: bold;
+    border-right: 5px solid yellow;
+    padding: 3px 15px;
+    font-size: 13px;
+    border-left: 0 !important;
+}
+
+.span {
+    @extend .span-header;
+    border-left: 0 !important;
+}
+
+.header-sec {
+    .second-nav {
+        .navbar-brand {
+            padding-right: 0;
+            border-left: 1px solid gray;
+            padding-left: 40px;
+            border-right: 0;
+            padding-right: 0;
+        }
+    }
+}
